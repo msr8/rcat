@@ -1,4 +1,4 @@
-import rich
+from rich import print as printf
 
 from argparse import ArgumentParser
 import os
@@ -9,8 +9,12 @@ def init_main():
     parser.add_argument('file', type=str)
     args = parser.parse_args()
 
-    print(args.file)
-    print(os.getcwd())
+    with open(args.file) as f:    content = f.read()
+    printf(content)
+
+
+
+
 
 
 if __name__ == '__main__':
