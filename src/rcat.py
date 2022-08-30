@@ -11,5 +11,5 @@ def init_main():
     print(args.file)
 
 
-
+init_main()
 
